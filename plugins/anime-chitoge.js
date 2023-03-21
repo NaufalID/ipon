@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, command }) => {
-	let url = 'https://revita.herokuapp.com/api/wallpaper/chitoge?apikey=ApiRevita'
+	let url = 'https://raw.githubusercontent.com/NaufalID/asupan2/master/chitoge.json'
 	conn.sendButton(m.chat, 'Waifu nya om (≧ω≦)', wm, await(await fetch(url)).buffer(), [['Next',`.${command}`]],m)
 }
 handler.command = /^(chitoge)$/i
